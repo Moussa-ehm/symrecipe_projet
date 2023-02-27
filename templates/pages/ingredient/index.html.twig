@@ -4,9 +4,18 @@
 {% endblock %}
 
 {% block body %}
+
 	<div class="container mt-4">
 		{% if not ingredients.items is same as([]) %}
 			<h1 class="text-center">Mes Ingredients</h1>
+
+			<a href="{{path('ingredient.new')}}" class="btn btn-primary">Ajouter un nouvelle ingrédient</a>
+
+			{% for message in app.flashes('success')%}
+				<div class="alert alert-dismissible alert-success mt-4">
+					{{message}}
+				</div>
+			{% endfor %}
 
 			{# total items count #}
 			<div class="count mt-4">
@@ -25,6 +34,8 @@
 						<th scope="col">Name</th>
 						<th scope="col">Price</th>
 						<th scope="col">Date</th>
+						<th scope="col">Editer</th>
+						<th scope="col">Supprimer</th>
 					</tr>
 				</thead>
 				<tbody class="text-center">
@@ -34,6 +45,12 @@
 							<td>{{ ingredient.name }}</td>
 							<td>{{ ingredient.price }}</td>
 							<td>{{ ingredient.createAt|date("d/m/Y") }}</td>
+							<td>
+								<a href="{{path('ingredient.edit', {id: ingredient.id})}}" class="btn btn-info" class="btn btn-info">Edit</button>
+							</td>
+							<td>
+								<a href="{{path('ingredient.delete', {id: ingredient.id})}}" class="btn btn-danger" class="btn btn-danger">Delete</button>
+							</td>
 						</tr>
 					{% endfor %}
 				</tbody>

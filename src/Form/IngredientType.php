@@ -36,7 +36,7 @@ class IngredientType extends AbstractType
                 'attr' => [
                     'class' => 'form-control'
                 ],
-                'label' => 'Prix ',
+                'label' => 'Prix',
                 'label_attr' => [
                     'class' => 'form-label mt-4'
                 ],
@@ -50,7 +50,7 @@ class IngredientType extends AbstractType
                 'attr' => [
                     'class' => 'btn btn-primary mt-4'
                 ],
-                'label' => 'Créer mon ingrédient ',
+                'label' => 'Créer mon ingrédient',
             ]);
     }
 
