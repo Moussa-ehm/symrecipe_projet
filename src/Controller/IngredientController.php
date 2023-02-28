@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class IngredientController extends AbstractController
 {
     /**
-     * Fonction permettant d'afficher tous les ingredients et les affichers
+     * Fonction permettant d'afficher tous les ingredients 
      * Injection de dépendance avec le repository
      * Appel de la fonction findAll
      * Injection de paginatorInterface pour gérer la pagination de la page et en afficher 10 max à chaque fois
@@ -40,7 +40,7 @@ class IngredientController extends AbstractController
     }
 
     /**
-     * This controller show a form which create an ingredient
+     * This controller create an ingredient
      *
      * @param Request $request
      * @param EntityManagerInterface $manager
@@ -70,7 +70,14 @@ class IngredientController extends AbstractController
         ]);
     }
 
-
+    /**
+     * Edit Ingredient
+     *
+     * @param Ingredient $ingredient
+     * @param Request $request
+     * @param EntityManagerInterface $manager
+     * @return Response
+     */
     #[Route('/ingredient/edition/{id}', name: 'ingredient.edit', methods: ['GET', 'POST'])]
     public function edit(Ingredient $ingredient, Request $request, EntityManagerInterface $manager): Response
     {
@@ -94,10 +101,16 @@ class IngredientController extends AbstractController
         ]);
     }
 
+    /**
+     * Delete ingredient
+     *
+     * @param Ingredient $ingredient
+     * @param EntityManagerInterface $manager
+     * @return Response
+     */
     #[Route('/ingredient/suppression/{id}', 'ingredient.delete', methods: ['GET'])]
     public function delete(Ingredient $ingredient, EntityManagerInterface $manager): Response
     {
-
         $manager->remove($ingredient);
         $manager->flush();
 

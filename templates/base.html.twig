@@ -13,6 +13,7 @@
 			{{ encore_entry_link_tags('app') }}
 			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cerulean/bootstrap.min.css" integrity="sha384-3fdgwJw17Bi87e1QQ4fsLn4rUFqWw//KU0g8TvV6quvahISRewev6/EocKNuJmEw" crossorigin="anonymous">
+
 		{% endblock %}
 
 		{% block javascripts %}
@@ -25,5 +26,8 @@
 			{% include "gabarit/_header.html.twig" %}
 		{% endblock %}
 		{% block body %}{% endblock %}
+		{% block footer %}
+			{% include "gabarit/_footer.html.twig" %}
+		{% endblock %}
 	</body>
 </html>
