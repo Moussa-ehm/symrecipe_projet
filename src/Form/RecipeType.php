@@ -47,7 +47,7 @@ class RecipeType extends AbstractType
                     'min' => 1,
                     'max' => 1040
                 ],
-                'required' => 'false',
+                'required' => false,
                 'label' => 'Temps en (minutes)',
                 'label_attr' => [
                     'class' => 'form-label mt-4'
@@ -63,7 +63,7 @@ class RecipeType extends AbstractType
                     'min' => 1,
                     'max' => 50
                 ],
-                'required' => 'false',
+                'required' => false,
                 'label' => 'Nombre de personnes',
                 'label_attr' => [
                     'class' => 'form-label mt-4'
@@ -79,7 +79,7 @@ class RecipeType extends AbstractType
                     'min' => 1,
                     'max' => 5
                 ],
-                'required' => 'false',
+                'required' => false,
                 'label' => 'Difficulté',
                 'label_attr' => [
                     'class' => 'form-label mt-4'
@@ -105,7 +105,7 @@ class RecipeType extends AbstractType
                 'attr' => [
                     'class' => 'form-control'
                 ],
-                'required' => 'false',
+                'required' => false,
                 'label' => 'Prix',
                 'label_attr' => [
                     'class' => 'form-label mt-4'
@@ -120,7 +120,7 @@ class RecipeType extends AbstractType
                 'attr' => [
                     'class' => 'form-check-input'
                 ],
-                'required' => 'false',
+                'required' => false,
                 'label' => 'Favoris ?',
                 'label_attr' => [
                     'class' => 'form-check-label pr-3'
@@ -139,7 +139,7 @@ class RecipeType extends AbstractType
                     'class' => 'form-label mt-4'
                 ],
                 'choice_label' => 'name',
-                'multiple' => 'true',
+                'multiple' => true,
                 'expanded' => true
             ])
             ->addEventListener(FormEvents::PRE_SET_DATA, function (FormEvent $event) {

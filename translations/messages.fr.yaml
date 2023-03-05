@@ -1,0 +1,16 @@
+security:
+  # Messages d'erreur de sécurité
+  IInvalid credentials.: "Nom d'utilisateur ou mot de passe incorrect."
+  user_not_found: Aucun utilisateur trouvé pour l'identifiant {{ username }}.
+  user_blocked: L'utilisateur est bloqué.
+  max_password_length: Le mot de passe est trop long.
+  min_password_length: Le mot de passe est trop court.
+  password_regex: Le mot de passe ne respecte pas les règles de complexité.
+  password_expired: Le mot de passe a expiré.
+  password_reset_required: Le mot de passe doit être réinitialisé.
+  invalid_credentials: Nom d'utilisateur ou mot de passe incorrect.
+  csrf_token_invalid: Le jeton CSRF est invalide.
+  csrf_token_expired: Le jeton CSRF a expiré.
+  too_many_login_attempts: Trop de tentatives de connexion.
+  invalid_refresh_token: Le jeton de rafraîchissement est invalide.
+  The presented password cannot be empty.: Le mot de passe présenté ne peut pas être vide.

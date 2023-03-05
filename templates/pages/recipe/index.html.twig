@@ -5,7 +5,7 @@
 
 {% block body %}
 
-	<div class="container mt-4">
+	<div class="container " style="padding-bottom: 155px;">
 		{% if not recipes.items is same as([]) %}
 			<h1 class="text-center">Mes Recettes</h1>
 			<div class="d-flex justify-content-end">
@@ -27,7 +27,7 @@
 				</div>
 			</div>
 
-			<table class="table table-hover mt-4">
+			<table class="table table-hover table-container vh-100 overflow-auto">
 				<thead>
 					<tr class="text-center">
 						<th scope="col">ID</th>
